@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HNY</title>
+    <style>
+
+     body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      background: linear-gradient(135deg, #0F4C81, #3A7BD5);
+    font-family: 'Segoe UI', sans-serif;
+      }
+      
+      button {
+        padding: 12px 12px;
+        font-size: 16px;
+        cursor: pointer;
+        border-color: black;
+        border-radius: 8px;
+      }
+     button:hover {
+        transform: scale(1.05);
+        background-color: rgb(12, 12, 53);
+        color: white;
+      }
+       .card {
+     display: none;
+    width: 340px;
+    max-height: 440px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: pop 0.6s ease;
+    overflow-y: auto;
+       }
+
+       h2 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    margin-top: 0;
+    text-align: center;
+  }
+
+   .note {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 26px,
+      rgba(0, 0, 0, 0.096) 27px
+    );
+    padding: 20px 20px 20px 40px;
+    border-left: 4px solid #ff9aa2;
+  }
+
+   @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .secondB {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border-color: black;
+  cursor: pointer;
+}
+
+    
+
+    </style>
+     </head>
+     
+    <body>
+      
+      <button id="openBtn" onclick="readMe()">Hello Name</button>
+      
+      
+      <div class="card" id="card">
+       <button class="secondB" onclick="back()">back</button> 
+      <h2>Happy New Year, Name!!!</h2>
+      <div class="note">
+      <p>
+         Thank you for being part of my 2024.  
+    Through all the laughs, stress, and random moments,
+    you were there and I’m really grateful for that.
+
+    I hope 2025 brings you happiness, growth, and
+    everything you’ve been wishing for.  
+    Let’s make more memories together 
+      </p> 
+      </div>
+      </div>
+
+      
+
+      <script>
+        function readMe() {
+          alert('appreciation message ahead bwahahsha'
+          );
+           document.getElementById("openBtn").style.display = "none";
+    document.getElementById("card").style.display = "block";
+        }
+
+        function back() {
+  document.getElementById("card").style.display = "none";
+  document.getElementById("openBtn").style.display = "inline-block";
+}
+      </script>
+
+
+
+      
+    </body>
+ 
+</html>
